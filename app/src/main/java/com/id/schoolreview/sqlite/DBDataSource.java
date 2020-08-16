@@ -7,6 +7,8 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 
 
+import com.id.schoolreview.pojo.DataReview;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,9 +21,7 @@ public class DBDataSource {
                     DBHelper.R_KODE,
                     DBHelper.R_NAMA,
                     DBHelper.R_DESKRIPSI,
-                    DBHelper.R_HARGA,
-                    DBHelper.R_IMAGE,
-                    DBHelper.R_SELECTION
+                    DBHelper.R_NILAI
 
             };
     public DBDataSource(Context context) {
@@ -36,38 +36,34 @@ public class DBDataSource {
         dbHelper.close();
     }
 
-    public long createRoti(DataRoti dataRoti) {
+    public long createRoti(DataReview dataRoti) {
         open();
         ContentValues values = new ContentValues();
-        values.put(DBHelper.R_KODE,dataRoti.getR_KODE());
-        values.put(DBHelper.R_NAMA ,dataRoti.getR_NAMA());
-        values.put(DBHelper.R_DESKRIPSI ,dataRoti.getR_DESKRIPSI());
-        values.put(DBHelper.R_HARGA, dataRoti.getR_HARGA());
-        values.put(DBHelper.R_IMAGE, dataRoti.getR_IMAGE());
-        values.put(DBHelper.R_SELECTION ,dataRoti.getR_SELECTION());
+        values.put(DBHelper.R_KODE,dataRoti.getKode());
+        values.put(DBHelper.R_NAMA ,dataRoti.getNama());
+        values.put(DBHelper.R_DESKRIPSI ,dataRoti.getDeskripsi());
+        values.put(DBHelper.R_NILAI, dataRoti.getNilai());
 
         long insertId = database.insert(DBHelper.TABLE_ROTI, null,values);
         close();
         return insertId;
     }
 
-    private DataRoti cursorToForm(Cursor cursor) {
+    private DataReview cursorToForm(Cursor cursor) {
         open();
-        DataRoti data = new DataRoti();
-        data.setR_KODE(cursor.getString(0));
-        data.setR_NAMA(cursor.getString(1));
-        data.setR_DESKRIPSI(cursor.getString(2));
-        data.setR_HARGA(cursor.getString(3));
-        data.setR_IMAGE(cursor.getString(4));
-        data.setR_SELECTION(cursor.getString(5));
+        DataReview data = new DataReview();
+        data.setKode(cursor.getString(0));
+        data.setNama(cursor.getString(1));
+        data.setDeskripsi(cursor.getString(2));
+        data.setNilai(cursor.getString(3));
 
         close();
         return data;
     }
-    public ArrayList<DataRoti> getAllRoti() {
+    public ArrayList<DataReview> getAllRoti() {
         open();
-        ArrayList<DataRoti> listdata = new ArrayList();
-        Cursor cursor = this.database.query(DBHelper.TABLE_ROTI, this.rotidata, DBHelper.R_SELECTION+"=0", null, null, null, DBHelper.R_KODE + " ASC");
+        ArrayList<DataReview> listdata = new ArrayList();
+        Cursor cursor = this.database.query(DBHelper.TABLE_ROTI, this.rotidata, null, null, null, null, DBHelper.R_KODE + " ASC");
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
             listdata.add(cursorToForm(cursor));
@@ -77,9 +73,9 @@ public class DBDataSource {
         close();
         return listdata;
     }
-    public ArrayList<DataRoti> getRotibyKode(String kode) {
+    public ArrayList<DataReview> getRotibyKode(String kode) {
         open();
-        ArrayList<DataRoti> listdata = new ArrayList();
+        ArrayList<DataReview> listdata = new ArrayList();
         Cursor cursor = this.database.query(DBHelper.TABLE_ROTI, this.rotidata, DBHelper.R_KODE+"='"+kode+"'", null, null, null, null);
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
@@ -98,18 +94,16 @@ public class DBDataSource {
         return a;
     }
 
-    public long updateRoti(DataRoti dataRoti) {
+    public long updateRoti(DataReview dataRoti) {
         open();
         ContentValues values = new ContentValues();
-        values.put(DBHelper.R_KODE,dataRoti.getR_KODE());
-        values.put(DBHelper.R_NAMA ,dataRoti.getR_NAMA());
-        values.put(DBHelper.R_DESKRIPSI ,dataRoti.getR_DESKRIPSI());
-        values.put(DBHelper.R_HARGA, dataRoti.getR_HARGA());
-        values.put(DBHelper.R_IMAGE, dataRoti.getR_IMAGE());
-        values.put(DBHelper.R_SELECTION ,dataRoti.getR_SELECTION());
+        values.put(DBHelper.R_KODE,dataRoti.getKode());
+        values.put(DBHelper.R_NAMA ,dataRoti.getNama());
+        values.put(DBHelper.R_DESKRIPSI ,dataRoti.getNama());
+        values.put(DBHelper.R_NILAI, dataRoti.getNilai());
 
 
-        long updateId = database.update(DBHelper.TABLE_ROTI, values, DBHelper.R_KODE+"='"+dataRoti.getR_KODE()+"'", null);
+        long updateId = database.update(DBHelper.TABLE_ROTI, values, DBHelper.R_KODE+"='"+dataRoti.getKode()+"'", null);
         close();
         return updateId;
     }

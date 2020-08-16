@@ -1,6 +1,6 @@
 package com.id.schoolreview.pojo;
 
-public class Review {
+public class DataReview {
     private String kode,nama,deskripsi,nilai;
 
     public String getNama() {

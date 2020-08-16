@@ -16,9 +16,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String R_KODE = "kode";
     public static final String R_NAMA = "nama";
     public static final String R_DESKRIPSI = "deskripsi";
-    public static final String R_HARGA = "harga";
-    public static final String R_IMAGE = "image";
-    public static final String R_SELECTION = "selection";
+    public static final String R_NILAI = "harga";
 
 
     private static final String db_roti = "create table "
@@ -27,9 +25,7 @@ public class DBHelper extends SQLiteOpenHelper {
             + R_KODE + " text,"
             + R_NAMA + " text,"
             + R_DESKRIPSI + " text,"
-            + R_HARGA + " text,"
-            + R_IMAGE + " text,"
-            + R_SELECTION + " INTEGER default 0);";
+            + R_NILAI + " text);";
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
