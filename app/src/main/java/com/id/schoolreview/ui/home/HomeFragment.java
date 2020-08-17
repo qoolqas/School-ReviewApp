@@ -19,7 +19,7 @@ import com.id.schoolreview.pojo.DataSchool;
 import java.util.ArrayList;
 
 public class HomeFragment extends Fragment implements HomeAdapter.OnItemClickListener{
-    RecyclerView recyclerViewsd, recyclerViewsmp, recyclerViewsma;
+    RecyclerView recyclerView;
     HomeAdapter adapter;
     private ArrayList<DataSchool> list;
 
@@ -44,13 +44,10 @@ public class HomeFragment extends Fragment implements HomeAdapter.OnItemClickLis
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        recyclerViewsd = view.findViewById(R.id.recyclersd);
-        recyclerViewsmp = view.findViewById(R.id.recyclersmp);
+        recyclerView = view.findViewById(R.id.recyclersd);
         adapter = new HomeAdapter(getActivity(), list);
-        recyclerViewsd.setLayoutManager(new LinearLayoutManager(getActivity()));
-        recyclerViewsmp.setLayoutManager(new LinearLayoutManager(getActivity()));
-        recyclerViewsd.setAdapter(adapter);
-        recyclerViewsmp.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recyclerView.setAdapter(adapter);
         prepare();
         addItem();
     }
@@ -80,7 +77,7 @@ public class HomeFragment extends Fragment implements HomeAdapter.OnItemClickLis
         }
         adapter = new HomeAdapter(getActivity(), list);
         adapter.setOnItemClickListener(this);
-        recyclerViewsd.setAdapter(adapter);
+        recyclerView.setAdapter(adapter);
     }
 
 
