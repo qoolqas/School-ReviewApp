@@ -10,12 +10,12 @@
         android:id="@+id/buttonSortir"
         android:layout_width="56dp"
         android:layout_height="56dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:src="@drawable/ic_baseline_sort_24"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:scaleType="center"
+        android:src="@drawable/ic_baseline_sort_24"
         app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
 
