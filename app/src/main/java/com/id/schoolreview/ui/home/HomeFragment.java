@@ -34,16 +34,6 @@ public class HomeFragment extends Fragment implements HomeAdapter.OnItemClickLis
     private String[] prestasi;
     private TypedArray prestasi1;
 
-    private String[] smpkode;
-    private String[] smpnama;
-    private String[] smptingkat;
-    private String[] smpalamat;
-    private TypedArray smpgambar;
-    private TypedArray smpbanner;
-    private String[] smpsarana;
-    private TypedArray smpsarana1;
-    private String[] smpprestasi;
-    private TypedArray smpprestasi1;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -62,9 +52,7 @@ public class HomeFragment extends Fragment implements HomeAdapter.OnItemClickLis
         recyclerViewsd.setAdapter(adapter);
         recyclerViewsmp.setAdapter(adapter);
         prepare();
-        prepare2();
         addItem();
-        addItem2();
     }
     private void prepare() {
         kode = getResources().getStringArray(R.array.array_kode_sd);
@@ -77,19 +65,6 @@ public class HomeFragment extends Fragment implements HomeAdapter.OnItemClickLis
         sarana1 = getResources().obtainTypedArray(R.array.array_sarana1_sd);
         prestasi = getResources().getStringArray(R.array.array_prestasi_sd);
         prestasi1 = getResources().obtainTypedArray(R.array.array_prestasi1_sd);
-
-    }
-    private void prepare2() {
-        smpkode = getResources().getStringArray(R.array.array_kode_sd);
-        smpnama = getResources().getStringArray(R.array.array_nama_sd);
-        smptingkat = getResources().getStringArray(R.array.array_tingkat_sd);
-        smpalamat = getResources().getStringArray(R.array.array_alamat_sd);
-        smpgambar = getResources().obtainTypedArray(R.array.array_gambar_sd);
-        smpbanner = getResources().obtainTypedArray(R.array.array_banner_sd);
-        smpsarana = getResources().getStringArray(R.array.array_sarana_sd);
-        smpsarana1 = getResources().obtainTypedArray(R.array.array_sarana1_sd);
-        smpprestasi = getResources().getStringArray(R.array.array_prestasi_sd);
-        smpprestasi1 = getResources().obtainTypedArray(R.array.array_prestasi1_sd);
 
     }
 
@@ -107,20 +82,7 @@ public class HomeFragment extends Fragment implements HomeAdapter.OnItemClickLis
         adapter.setOnItemClickListener(this);
         recyclerViewsd.setAdapter(adapter);
     }
-    private void addItem2() {
-        ArrayList<DataSchool> list = new ArrayList<>();
-        for (int i = 0; i < smpnama.length; i++) {
-            DataSchool items = new DataSchool();
-            items.setNama(smpnama[i]);
-            items.setGambar(smpgambar.getResourceId(i,-1));
-            items.setAlamat(smpalamat[i]);
 
-            list.add(items);
-        }
-        adapter = new HomeAdapter(getActivity(), list);
-        adapter.setOnItemClickListener(this);
-        recyclerViewsmp.setAdapter(adapter);
-    }
 
     @Override
     public void onItemClick(int position) {
