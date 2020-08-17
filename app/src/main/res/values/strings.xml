@@ -13,4 +13,63 @@
     <string name="menu_slideshow">Slideshow</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="array_kode_sd">
+        <item>sd01</item>
+        <item>sd02</item>
+        <item>sd03</item>
+    </string-array>
+
+    <string-array name="array_nama_sd">
+        <item>SD 01 Purwokerto</item>
+        <item>SD 02 Purwokerto</item>
+        <item>SD 03 Purwokerto</item>
+    </string-array>
+
+    <string-array name="array_tingkat_sd">
+        <item>SD</item>
+        <item>SD</item>
+        <item>SD</item>
+    </string-array>
+
+    <string-array name="array_alamat_sd">
+        <item>Jalan D.I Panjaitan</item>
+        <item>Jalan D.I Panjaitan</item>
+        <item>Jalan D.I Panjaitan</item>
+    </string-array>
+
+    <string-array name="array_gambar_sd">
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+    </string-array>
+
+    <string-array name="array_banner_sd">
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+    </string-array>
+
+    <string-array name="array_sarana_sd">
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara</item>
+    </string-array>
+
+    <string-array name="array_sarana1_sd">
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+    </string-array>
+
+    <string-array name="array_prestasi_sd">
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara</item>
+    </string-array>
+
+    <string-array name="array_prestasi1_sd">
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+    </string-array>
 </resources>

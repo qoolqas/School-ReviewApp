@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.id.schoolreview.R;
 import com.id.schoolreview.pojo.DataSchool;
 
@@ -40,7 +41,10 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder>{
 
     @Override
     public void onBindViewHolder(@NonNull HomeAdapter.ViewHolder holder, int position) {
-
+        DataSchool items = list.get(position);
+        holder.nama.setText(items.getNama());
+        holder.alamat.setText(items.getAlamat());
+        Glide.with(holder.photo).load(items.getGambar()).into(holder.photo);
     }
 
     @Override
