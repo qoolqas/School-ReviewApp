@@ -99,7 +99,7 @@ public class DBDataSource {
         ContentValues values = new ContentValues();
         values.put(DBHelper.R_KODE,dataRoti.getKode());
         values.put(DBHelper.R_NAMA ,dataRoti.getNama());
-        values.put(DBHelper.R_DESKRIPSI ,dataRoti.getNama());
+        values.put(DBHelper.R_DESKRIPSI ,dataRoti.getDeskripsi());
         values.put(DBHelper.R_NILAI, dataRoti.getNilai());
 
 
