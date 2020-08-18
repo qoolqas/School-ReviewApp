@@ -4,7 +4,9 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class DataSchool implements Parcelable {
-    String kode, nama, tingkat,alamat, gambar, banner, sarana, sarana1, prestasi, prestasi1;
+    String kode, nama, tingkat,alamat, sarana, prestasi;
+    int gambar, banner, sarana1,prestasi1;
+
 
     public String getKode() {
         return kode;
@@ -38,21 +40,6 @@ public class DataSchool implements Parcelable {
         this.alamat = alamat;
     }
 
-    public String getGambar() {
-        return gambar;
-    }
-
-    public void setGambar(String gambar) {
-        this.gambar = gambar;
-    }
-
-    public String getBanner() {
-        return banner;
-    }
-
-    public void setBanner(String banner) {
-        this.banner = banner;
-    }
 
     public String getSarana() {
         return sarana;
@@ -62,13 +49,7 @@ public class DataSchool implements Parcelable {
         this.sarana = sarana;
     }
 
-    public String getSarana1() {
-        return sarana1;
-    }
 
-    public void setSarana1(String sarana1) {
-        this.sarana1 = sarana1;
-    }
 
     public String getPrestasi() {
         return prestasi;
@@ -78,11 +59,36 @@ public class DataSchool implements Parcelable {
         this.prestasi = prestasi;
     }
 
-    public String getPrestasi1() {
+
+    public int getGambar() {
+        return gambar;
+    }
+
+    public void setGambar(int gambar) {
+        this.gambar = gambar;
+    }
+
+    public int getBanner() {
+        return banner;
+    }
+
+    public void setBanner(int banner) {
+        this.banner = banner;
+    }
+
+    public int getSarana1() {
+        return sarana1;
+    }
+
+    public void setSarana1(int sarana1) {
+        this.sarana1 = sarana1;
+    }
+
+    public int getPrestasi1() {
         return prestasi1;
     }
 
-    public void setPrestasi1(String prestasi1) {
+    public void setPrestasi1(int prestasi1) {
         this.prestasi1 = prestasi1;
     }
 
@@ -97,12 +103,12 @@ public class DataSchool implements Parcelable {
         dest.writeString(this.nama);
         dest.writeString(this.tingkat);
         dest.writeString(this.alamat);
-        dest.writeString(this.gambar);
-        dest.writeString(this.banner);
         dest.writeString(this.sarana);
-        dest.writeString(this.sarana1);
         dest.writeString(this.prestasi);
-        dest.writeString(this.prestasi1);
+        dest.writeInt(this.gambar);
+        dest.writeInt(this.banner);
+        dest.writeInt(this.sarana1);
+        dest.writeInt(this.prestasi1);
     }
 
     public DataSchool() {
@@ -113,12 +119,12 @@ public class DataSchool implements Parcelable {
         this.nama = in.readString();
         this.tingkat = in.readString();
         this.alamat = in.readString();
-        this.gambar = in.readString();
-        this.banner = in.readString();
         this.sarana = in.readString();
-        this.sarana1 = in.readString();
         this.prestasi = in.readString();
-        this.prestasi1 = in.readString();
+        this.gambar = in.readInt();
+        this.banner = in.readInt();
+        this.sarana1 = in.readInt();
+        this.prestasi1 = in.readInt();
     }
 
     public static final Parcelable.Creator<DataSchool> CREATOR = new Parcelable.Creator<DataSchool>() {
