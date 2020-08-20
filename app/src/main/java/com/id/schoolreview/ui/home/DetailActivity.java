@@ -19,5 +19,7 @@ public class DetailActivity extends AppCompatActivity {
         dataSchool = getIntent().getParcelableExtra("data");
 
         Log.d("test", Objects.requireNonNull(dataSchool).getNama());
+
+
     }
 }
