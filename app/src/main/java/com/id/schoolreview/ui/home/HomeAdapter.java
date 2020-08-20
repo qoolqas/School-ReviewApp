@@ -22,18 +22,12 @@ import java.util.ArrayList;
 public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder>{
     private Context context;
     private ArrayList<DataSchool> list;
-//    private OnItemClickListener mListener;
 
     public HomeAdapter(Context context, ArrayList<DataSchool> list) {
         this.context = context;
         this.list = list;
     }
-//    public interface OnItemClickListener{
-//        void onItemClick(int position);
-//    }
-//    public void setOnItemClickListener(OnItemClickListener listener) {
-//        mListener = listener;
-//    }
+
     @NonNull
     @Override
     public HomeAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -76,17 +70,6 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder>{
                     }
                 }
             });
-//            itemView.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    if (mListener != null) {
-//                        int position = getAdapterPosition();
-//                        if (position != RecyclerView.NO_POSITION) {
-//                            mListener.onItemClick(position);
-//                        }
-//                    }
-//                }
-//            });
         }
     }
 }
