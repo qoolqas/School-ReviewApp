@@ -84,9 +84,16 @@ public class HomeFragment extends Fragment {
         ArrayList<DataSchool> list = new ArrayList<>();
         for (int i = 0; i < nama.length; i++) {
             DataSchool items = new DataSchool();
+            items.setKode(kode[i]);
             items.setNama(nama[i]);
-            items.setGambar(gambar.getResourceId(i, -1));
+            items.setTingkat(tingkat[i]);
             items.setAlamat(alamat[i]);
+            items.setGambar(gambar.getResourceId(i, -1));
+            items.setBanner(banner.getResourceId(i, -1));
+            items.setSarana(sarana[i]);
+            items.setSarana1(sarana1.getResourceId(i, -1));
+            items.setPrestasi(prestasi[i]);
+            items.setPrestasi1(prestasi1.getResourceId(i, -1));
 
             list.add(items);
         }
