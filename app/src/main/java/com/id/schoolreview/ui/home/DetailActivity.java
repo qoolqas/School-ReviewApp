@@ -1,25 +1,36 @@
 package com.id.schoolreview.ui.home;
 
+import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
-
-import android.os.Bundle;
-import android.util.Log;
-import android.widget.ImageView;
-import android.widget.TextView;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.id.schoolreview.R;
+import com.id.schoolreview.pojo.DataReview;
 import com.id.schoolreview.pojo.DataSchool;
+import com.id.schoolreview.pojo.ReviewProvider;
+import com.id.schoolreview.sqlite.DBDataSource;
 
-import java.util.Objects;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DetailActivity extends AppCompatActivity {
     DataSchool dataSchool;
     ImageView banner,poster,sarana1,prestasi1;
     TextView nama, alamat, sarana, prestasi;
+
+    RecyclerView recyclerView;
+    private DBDataSource dataSource;
+    ReviewProvider provform;
+    private List<ReviewProvider> arraylistform = new ArrayList<>();
+    private ReviewAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +39,8 @@ public class DetailActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         CollapsingToolbarLayout collapsingToolbarLayout = findViewById(R.id.collapsing_toolbar);
+
+        dataSource = new DBDataSource(getApplicationContext());
 
         poster = findViewById(R.id.detail_poster);
         banner = findViewById(R.id.detail_banner);
@@ -56,10 +69,29 @@ public class DetailActivity extends AppCompatActivity {
         collapsingToolbarLayout.setExpandedTitleColor(
                 ContextCompat.getColor(this, R.color.transparent));
 
-        Log.d("test", Objects.requireNonNull(dataSchool).getNama());
-        Log.d("test2", String.valueOf(Objects.requireNonNull(dataSchool).getGambar()));
-        Log.d("test3", String.valueOf(Objects.requireNonNull(dataSchool).getBanner()));
+    }
+    void getData() {
+        arraylistform.clear();
+        ArrayList<DataReview> forms = dataSource.getRotibyKode(dataSchool.getKode());
+        if (forms.size() > 0) {
+            for (int i = 0; i < forms.toArray().length; i++) {
+                final DataReview cv = forms.get(i);
+                provform = new ReviewProvider(cv.getKode(),cv.getNama(),cv.getDeskripsi(),cv.getNilai());
+                arraylistform.add(provform);
+            }
+            adapter.notifyDataSetChanged();
 
+        } else {
+            Toast.makeText(getApplicationContext(), "No Data", Toast.LENGTH_LONG).show();
+            arraylistform.clear();
+            adapter.notifyDataSetChanged();
+        }
 
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        getData();
     }
 }
