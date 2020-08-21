@@ -212,6 +212,10 @@
                     app:layout_constraintTop_toTopOf="parent"
                     tools:src="@drawable/smk1" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnReview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

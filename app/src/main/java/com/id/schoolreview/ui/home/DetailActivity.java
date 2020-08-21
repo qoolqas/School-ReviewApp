@@ -1,6 +1,9 @@
 package com.id.schoolreview.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -12,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
+import com.google.android.material.button.MaterialButton;
 import com.id.schoolreview.R;
 import com.id.schoolreview.pojo.DataReview;
 import com.id.schoolreview.pojo.DataSchool;
@@ -25,6 +29,7 @@ public class DetailActivity extends AppCompatActivity {
     DataSchool dataSchool;
     ImageView banner,poster,sarana1,prestasi1;
     TextView nama, alamat, sarana, prestasi;
+    MaterialButton review;
 
     RecyclerView recyclerView;
     private DBDataSource dataSource;
@@ -69,29 +74,38 @@ public class DetailActivity extends AppCompatActivity {
         collapsingToolbarLayout.setExpandedTitleColor(
                 ContextCompat.getColor(this, R.color.transparent));
 
-    }
-    void getData() {
-        arraylistform.clear();
-        ArrayList<DataReview> forms = dataSource.getRotibyKode(dataSchool.getKode());
-        if (forms.size() > 0) {
-            for (int i = 0; i < forms.toArray().length; i++) {
-                final DataReview cv = forms.get(i);
-                provform = new ReviewProvider(cv.getKode(),cv.getNama(),cv.getDeskripsi(),cv.getNilai());
-                arraylistform.add(provform);
+        review = findViewById(R.id.btnReview);
+        review.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DetailActivity.this, ReviewActivity.class);
+                startActivity(intent);
             }
-            adapter.notifyDataSetChanged();
-
-        } else {
-            Toast.makeText(getApplicationContext(), "No Data", Toast.LENGTH_LONG).show();
-            arraylistform.clear();
-            adapter.notifyDataSetChanged();
-        }
+        });
 
     }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        getData();
-    }
+//    void getData() {
+//        arraylistform.clear();
+//        ArrayList<DataReview> forms = dataSource.getRotibyKode(dataSchool.getKode());
+//        if (forms.size() > 0) {
+//            for (int i = 0; i < forms.toArray().length; i++) {
+//                final DataReview cv = forms.get(i);
+//                provform = new ReviewProvider(cv.getKode(),cv.getNama(),cv.getDeskripsi(),cv.getNilai());
+//                arraylistform.add(provform);
+//            }
+//            adapter.notifyDataSetChanged();
+//
+//        } else {
+//            Toast.makeText(getApplicationContext(), "No Data", Toast.LENGTH_LONG).show();
+//            arraylistform.clear();
+//            adapter.notifyDataSetChanged();
+//        }
+//
+//    }
+//
+//    @Override
+//    public void onResume() {
+//        super.onResume();
+//        getData();
+//    }
 }
