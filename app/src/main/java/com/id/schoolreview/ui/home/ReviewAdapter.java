@@ -40,7 +40,6 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ViewHolder
     public void onBindViewHolder(@NonNull ReviewAdapter.ViewHolder holder, int position) {
         ReviewProvider items = list.get(position);
         holder.nama.setText(items.getNama());
-        holder.alamat.setText(items.getAlamat());
     }
 
     @Override
@@ -48,14 +47,11 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ViewHolder
         return list.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView nama, alamat;
-        ImageView photo;
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        TextView nama, deskripsi,skor;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             nama = itemView.findViewById(R.id.nama);
-            alamat = itemView.findViewById(R.id.alamat);
-            photo = itemView.findViewById(R.id.photo);
         }
     }
 }
