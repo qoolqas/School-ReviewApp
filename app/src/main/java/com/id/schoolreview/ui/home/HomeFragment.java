@@ -6,10 +6,13 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -18,8 +21,8 @@ import com.id.schoolreview.pojo.DataSchool;
 
 import java.util.ArrayList;
 
-public class HomeFragment extends Fragment implements HomeAdapter.OnItemClickListener{
-    RecyclerView recyclerView;
+public class HomeFragment extends Fragment {
+    RecyclerView recyclerViewsd;
     HomeAdapter adapter;
     private ArrayList<DataSchool> list;
 
@@ -34,6 +37,16 @@ public class HomeFragment extends Fragment implements HomeAdapter.OnItemClickLis
     private String[] prestasi;
     private TypedArray prestasi1;
 
+    private String[] smpkode;
+    private String[] smpnama;
+    private String[] smptingkat;
+    private String[] smpalamat;
+    private TypedArray smpgambar;
+    private TypedArray smpbanner;
+    private String[] smpsarana;
+    private TypedArray smpsarana1;
+    private String[] smpprestasi;
+    private TypedArray smpprestasi1;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -44,13 +57,14 @@ public class HomeFragment extends Fragment implements HomeAdapter.OnItemClickLis
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        recyclerView = view.findViewById(R.id.recyclersd);
+        recyclerViewsd = view.findViewById(R.id.recyclersd);
         adapter = new HomeAdapter(getActivity(), list);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        recyclerView.setAdapter(adapter);
+        recyclerViewsd.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recyclerViewsd.setAdapter(adapter);
         prepare();
         addItem();
     }
+
     private void prepare() {
         kode = getResources().getStringArray(R.array.array_kode_sd);
         nama = getResources().getStringArray(R.array.array_nama_sd);
@@ -65,37 +79,27 @@ public class HomeFragment extends Fragment implements HomeAdapter.OnItemClickLis
 
     }
 
+
     private void addItem() {
         ArrayList<DataSchool> list = new ArrayList<>();
         for (int i = 0; i < nama.length; i++) {
             DataSchool items = new DataSchool();
+            items.setKode(kode[i]);
             items.setNama(nama[i]);
-            items.setGambar(gambar.getResourceId(i,-1));
+            items.setTingkat(tingkat[i]);
             items.setAlamat(alamat[i]);
+            items.setGambar(gambar.getResourceId(i, -1));
+            items.setBanner(banner.getResourceId(i, -1));
+            items.setSarana(sarana[i]);
+            items.setSarana1(sarana1.getResourceId(i, -1));
+            items.setPrestasi(prestasi[i]);
+            items.setPrestasi1(prestasi1.getResourceId(i, -1));
 
             list.add(items);
         }
         adapter = new HomeAdapter(getActivity(), list);
-        adapter.setOnItemClickListener(this);
-        recyclerView.setAdapter(adapter);
-    }
-
-
-    @Override
-    public void onItemClick(int position) {
-        DataSchool data = new DataSchool();
-        data.setKode(kode[position]);
-        data.setNama(nama[position]);
-        data.setTingkat(tingkat[position]);
-        data.setAlamat(alamat[position]);
-        data.setGambar(gambar.getResourceId(position,-1));
-        data.setBanner(banner.getResourceId(position,-1));
-        data.setSarana(sarana[position]);
-        data.setSarana1(sarana1.getResourceId(position,-1));
-        data.setPrestasi(prestasi[position]);
-        data.setPrestasi1(prestasi1.getResourceId(position,-1));
-        Intent intent = new Intent(getActivity(), DetailActivity.class);
-        intent.putExtra("DETAIL_DATA", data);
-        startActivity(intent);
+        recyclerViewsd.setAdapter(adapter);
     }
 }
+
+
