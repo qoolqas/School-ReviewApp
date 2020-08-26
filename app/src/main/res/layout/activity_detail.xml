@@ -212,6 +212,15 @@
                     app:layout_constraintTop_toTopOf="parent"
                     tools:src="@drawable/smk1" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_margin="8dp"
+                android:background="#a9a9a9" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnLokasi"/>
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnReview"
                 android:layout_width="match_parent"

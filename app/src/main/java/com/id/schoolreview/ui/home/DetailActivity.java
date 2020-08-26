@@ -79,6 +79,8 @@ public class DetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(DetailActivity.this, ReviewActivity.class);
+                intent.putExtra("kode", dataSchool.getKode());
+                intent.putExtra("kode", dataSchool.getNama());
                 startActivity(intent);
             }
         });
