@@ -86,28 +86,28 @@ public class DetailActivity extends AppCompatActivity {
         });
 
     }
-//    void getData() {
-//        arraylistform.clear();
-//        ArrayList<DataReview> forms = dataSource.getRotibyKode(dataSchool.getKode());
-//        if (forms.size() > 0) {
-//            for (int i = 0; i < forms.toArray().length; i++) {
-//                final DataReview cv = forms.get(i);
-//                provform = new ReviewProvider(cv.getKode(),cv.getNama(),cv.getDeskripsi(),cv.getNilai());
-//                arraylistform.add(provform);
-//            }
-//            adapter.notifyDataSetChanged();
-//
-//        } else {
-//            Toast.makeText(getApplicationContext(), "No Data", Toast.LENGTH_LONG).show();
-//            arraylistform.clear();
-//            adapter.notifyDataSetChanged();
-//        }
-//
-//    }
-//
-//    @Override
-//    public void onResume() {
-//        super.onResume();
-//        getData();
-//    }
+    void getData() {
+        arraylistform.clear();
+        ArrayList<DataReview> forms = dataSource.getRotibyKode(dataSchool.getKode());
+        if (forms.size() > 0) {
+            for (int i = 0; i < forms.toArray().length; i++) {
+                final DataReview cv = forms.get(i);
+                provform = new ReviewProvider(cv.getKode(),cv.getNama(),cv.getDeskripsi(),cv.getNilai());
+                arraylistform.add(provform);
+            }
+            adapter.notifyDataSetChanged();
+
+        } else {
+            Toast.makeText(getApplicationContext(), "No Data", Toast.LENGTH_LONG).show();
+            arraylistform.clear();
+            adapter.notifyDataSetChanged();
+        }
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        getData();
+    }
 }
