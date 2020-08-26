@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -31,10 +32,10 @@ public class DetailActivity extends AppCompatActivity {
     TextView nama, alamat, sarana, prestasi;
     MaterialButton review;
 
-    RecyclerView recyclerView;
+    RecyclerView rv;
     private DBDataSource dataSource;
     ReviewProvider provform;
-    private List<ReviewProvider> arraylistform = new ArrayList<>();
+    private ArrayList<ReviewProvider> arraylistform = new ArrayList<>();
     private ReviewAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,38 +75,48 @@ public class DetailActivity extends AppCompatActivity {
         collapsingToolbarLayout.setExpandedTitleColor(
                 ContextCompat.getColor(this, R.color.transparent));
 
+        adapter = new ReviewAdapter(this, arraylistform);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
+        rv = findViewById(R.id.rv);
+        rv.setLayoutManager(mLayoutManager);
+        rv.setAdapter(adapter);
+
         review = findViewById(R.id.btnReview);
         review.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(DetailActivity.this, ReviewActivity.class);
+                intent.putExtra("kode", dataSchool.getKode());
+                intent.putExtra("nama", dataSchool.getNama());
                 startActivity(intent);
             }
+
         });
 
     }
-//    void getData() {
-//        arraylistform.clear();
-//        ArrayList<DataReview> forms = dataSource.getRotibyKode(dataSchool.getKode());
-//        if (forms.size() > 0) {
-//            for (int i = 0; i < forms.toArray().length; i++) {
-//                final DataReview cv = forms.get(i);
-//                provform = new ReviewProvider(cv.getKode(),cv.getNama(),cv.getDeskripsi(),cv.getNilai());
-//                arraylistform.add(provform);
-//            }
-//            adapter.notifyDataSetChanged();
-//
-//        } else {
-//            Toast.makeText(getApplicationContext(), "No Data", Toast.LENGTH_LONG).show();
-//            arraylistform.clear();
-//            adapter.notifyDataSetChanged();
-//        }
-//
-//    }
-//
-//    @Override
-//    public void onResume() {
-//        super.onResume();
-//        getData();
-//    }
+    void getData() {
+        arraylistform.clear();
+        ArrayList<DataReview> forms = dataSource.getRotibyKode(dataSchool.getKode());
+        //ArrayList<DataReview> forms = dataSource.getAllRoti();
+        if (forms.size() > 0) {
+            for (int i = 0; i < forms.toArray().length; i++) {
+                final DataReview cv = forms.get(i);
+                provform = new ReviewProvider(cv.getKode(),cv.getNama(),cv.getDeskripsi(),cv.getNilai());
+                arraylistform.add(provform);
+            }
+            adapter.notifyDataSetChanged();
+
+        } else {
+            Toast.makeText(getApplicationContext(), "Belum ada review", Toast.LENGTH_LONG).show();
+            arraylistform.clear();
+            adapter.notifyDataSetChanged();
+        }
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        getData();
+    }
 }

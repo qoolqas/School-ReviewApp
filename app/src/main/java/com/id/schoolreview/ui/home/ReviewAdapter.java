@@ -1,20 +1,16 @@
 package com.id.schoolreview.ui.home;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.id.schoolreview.R;
-import com.id.schoolreview.pojo.DataReview;
-import com.id.schoolreview.pojo.DataSchool;
 import com.id.schoolreview.pojo.ReviewProvider;
 
 import java.util.ArrayList;
@@ -40,6 +36,8 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ViewHolder
     public void onBindViewHolder(@NonNull ReviewAdapter.ViewHolder holder, int position) {
         ReviewProvider items = list.get(position);
         holder.nama.setText(items.getNama());
+        holder.deskripsi.setText(items.getDeskripsi());
+        holder.ratingBar.setRating(Float.parseFloat(items.getNilai()));
     }
 
     @Override
@@ -49,9 +47,13 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ViewHolder
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView nama, deskripsi,skor;
+        RatingBar ratingBar;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             nama = itemView.findViewById(R.id.nama);
+            deskripsi = itemView.findViewById(R.id.deskripsi);
+            ratingBar = itemView.findViewById(R.id.ratingBar);
+            skor = itemView.findViewById(R.id.skor);
         }
     }
 }
