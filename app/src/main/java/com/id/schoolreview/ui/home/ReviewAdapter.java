@@ -53,6 +53,7 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ViewHolder
             nama = itemView.findViewById(R.id.nama);
             deskripsi = itemView.findViewById(R.id.deskripsi);
             ratingBar = itemView.findViewById(R.id.ratingBar);
+            skor = itemView.findViewById(R.id.skor);
         }
     }
 }

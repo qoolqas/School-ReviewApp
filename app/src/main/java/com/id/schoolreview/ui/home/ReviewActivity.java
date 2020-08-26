@@ -36,8 +36,10 @@ public class ReviewActivity extends AppCompatActivity {
         deskripsi = findViewById(R.id.deskripsi);
         try {
             kode = getIntent().getStringExtra("kode");
+            nama = getIntent().getStringExtra("nama");
         }catch (Exception e){
             kode = "0";
+            nama = "0";
         }
 
 
