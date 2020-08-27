@@ -14,7 +14,11 @@ import com.id.schoolreview.R;
 import com.id.schoolreview.pojo.DataReview;
 import com.id.schoolreview.sqlite.DBDataSource;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 import java.util.Objects;
 
 public class ReviewActivity extends AppCompatActivity {
@@ -27,6 +31,11 @@ public class ReviewActivity extends AppCompatActivity {
     TextInputEditText deskripsi;
     DBDataSource dataSource;
 
+    Date currentTime;
+    SimpleDateFormat sdfc;
+    String myFormats = "dd/MM/yyyy hh:mm:ss";
+    String kodeid = "0";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,12 +44,16 @@ public class ReviewActivity extends AppCompatActivity {
         ratingBar = findViewById(R.id.ratingBar);
         submit = findViewById(R.id.btnSubmit);
         deskripsi = findViewById(R.id.deskripsi);
+        currentTime = Calendar.getInstance().getTime();
+        sdfc = new SimpleDateFormat(myFormats, Locale.US);
         try {
             kode = getIntent().getStringExtra("kode");
             nama = getIntent().getStringExtra("nama");
             edit = getIntent().getStringExtra("edit");
+            kodeid = getIntent().getStringExtra("kodeid");
         }catch (Exception e){
             kode = "0";
+            kodeid = "0";
             nama = "0";
             edit = "1";
         }
@@ -95,6 +108,7 @@ public class ReviewActivity extends AppCompatActivity {
         data.setNama(nama);
         data.setDeskripsi(Objects.requireNonNull(deskripsi.getText()).toString());
         data.setNilai(nilai);
+        data.setKodeid(sdfc.format(currentTime).replaceAll("/", "").replace(" ", "").replaceAll(":", ""));
 
         long result = dataSource.createRoti(data);
         if (result > 0) {
@@ -116,6 +130,7 @@ public class ReviewActivity extends AppCompatActivity {
         data.setNama(nama);
         data.setDeskripsi(deskripsi.getText().toString());
         data.setNilai(nilai);
+        data.setKodeid(kodeid);
         long result = dataSource.updateRoti(data);
         if (result > 0) {
             finish();

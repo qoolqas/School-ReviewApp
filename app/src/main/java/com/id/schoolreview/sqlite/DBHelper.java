@@ -14,6 +14,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String TABLE_ROTI = "tableroti";
     public static final String R_ID = "id";
     public static final String R_KODE = "kode";
+    public static final String R_KODEID = "kodeid";
     public static final String R_NAMA = "nama";
     public static final String R_DESKRIPSI = "deskripsi";
     public static final String R_NILAI = "harga";
@@ -23,6 +24,7 @@ public class DBHelper extends SQLiteOpenHelper {
             + TABLE_ROTI + "("
             + R_ID + " INTEGER primary key autoincrement not null,"
             + R_KODE + " text,"
+            + R_KODEID + " text,"
             + R_NAMA + " text,"
             + R_DESKRIPSI + " text,"
             + R_NILAI + " text);";

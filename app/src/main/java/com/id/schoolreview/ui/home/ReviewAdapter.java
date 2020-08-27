@@ -46,7 +46,7 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ViewHolder
         final ReviewProvider items = list.get(position);
         holder.nama.setText(items.getNama());
         holder.deskripsi.setText(items.getDeskripsi());
-        //holder.ratingBar.setRating(Float.parseFloat(items.getNilai()));
+        holder.ratingBar.setRating(Float.parseFloat(items.getNilai()));
         holder.skor.setText(items.getNilai());
 
         holder.more.setOnClickListener(new View.OnClickListener() {

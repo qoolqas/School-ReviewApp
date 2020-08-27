@@ -19,6 +19,7 @@ public class DBDataSource {
     private String[] rotidata = new String[]
             {
                     DBHelper.R_KODE,
+                    DBHelper.R_KODEID,
                     DBHelper.R_NAMA,
                     DBHelper.R_DESKRIPSI,
                     DBHelper.R_NILAI
@@ -86,10 +87,23 @@ public class DBDataSource {
         close();
         return listdata;
     }
+    public ArrayList<DataReview> getRotibyKodeid(String kode) {
+        open();
+        ArrayList<DataReview> listdata = new ArrayList();
+        Cursor cursor = this.database.query(DBHelper.TABLE_ROTI, this.rotidata, DBHelper.R_KODEID+"='"+kode+"'", null, null, null, null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            listdata.add(cursorToForm(cursor));
+            cursor.moveToNext();
+        }
+        cursor.close();
+        close();
+        return listdata;
+    }
 
     public long deleteRoti(String kode) {
         open();
-        long a = this.database.delete(DBHelper.TABLE_ROTI, DBHelper.R_KODE+"='"+kode+"'", null);
+        long a = this.database.delete(DBHelper.TABLE_ROTI, DBHelper.R_KODEID+"='"+kode+"'", null);
         close();
         return a;
     }
@@ -103,7 +117,7 @@ public class DBDataSource {
         values.put(DBHelper.R_NILAI, dataRoti.getNilai());
 
 
-        long updateId = database.update(DBHelper.TABLE_ROTI, values, DBHelper.R_KODE+"='"+dataRoti.getKode()+"'", null);
+        long updateId = database.update(DBHelper.TABLE_ROTI, values, DBHelper.R_KODEID+"='"+dataRoti.getKodeid()+"'", null);
         close();
         return updateId;
     }
