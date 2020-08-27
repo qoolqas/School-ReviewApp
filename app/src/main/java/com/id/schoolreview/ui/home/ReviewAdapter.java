@@ -65,6 +65,7 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ViewHolder
                                             public void onClick(DialogInterface dialog, int which) {
                                                 Intent intent = new Intent(context, ReviewActivity.class);
                                                 intent.putExtra("kode", items.getKode());
+                                                intent.putExtra("kodeid", items.getKodeid());
                                                 intent.putExtra("edit", "1");
                                                 intent.putExtra("view", "0");
                                                 context.startActivity(intent);
@@ -85,7 +86,7 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ViewHolder
                                             public void onClick(DialogInterface dialog, int which) {
                                                 // Continue with delete operation
 
-                                                long a = datasource.deleteRoti(items.getKode());
+                                                long a = datasource.deleteRoti(items.getKodeid());
                                                 if (a > 0) {
                                                     dialog.dismiss();
                                                     ((DetailActivity) context).getData();

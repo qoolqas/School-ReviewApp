@@ -217,7 +217,7 @@
                 android:layout_height="2dp"
                 android:layout_margin="8dp"
                 android:background="#a9a9a9" />
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/btnLokasi"/>

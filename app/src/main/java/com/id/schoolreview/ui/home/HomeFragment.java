@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.id.schoolreview.R;
 import com.id.schoolreview.pojo.DataSchool;
 
@@ -21,6 +22,7 @@ public class HomeFragment extends Fragment {
     RecyclerView recyclerViewsd;
     HomeAdapter adapter;
     private ArrayList<DataSchool> list;
+    FloatingActionButton fab;
 
     private String[] kode;
     private String[] nama;

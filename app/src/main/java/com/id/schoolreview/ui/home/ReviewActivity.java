@@ -122,11 +122,15 @@ public class ReviewActivity extends AppCompatActivity {
         }
     }
     private void setEdit(){
-        ArrayList<DataReview> forms = dataSource.getRotibyKode(kode);
+        ArrayList<DataReview> forms = dataSource.getRotibyKodeid(kodeid);
         if (forms.size() == 1) {
             final DataReview data = forms.get(0);
+            nama = data.getNama();
+            kodeid = data.getKodeid();
+            kode = data.getKode();
             deskripsi.setText(data.getDeskripsi());
             ratingBar.setRating(Float.parseFloat(data.getNilai()));
+            nilai = data.getNilai();
 
         }
     }
@@ -134,7 +138,7 @@ public class ReviewActivity extends AppCompatActivity {
         DataReview data = new DataReview();
         data.setKode(kode);
         data.setNama(nama);
-        data.setDeskripsi(deskripsi.getText().toString());
+        data.setDeskripsi(Objects.requireNonNull(deskripsi.getText()).toString());
         data.setNilai(nilai);
         data.setKodeid(kodeid);
         long result = dataSource.updateRoti(data);

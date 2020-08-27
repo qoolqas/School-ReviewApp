@@ -15,6 +15,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="content_image">content_image</string>
     <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquam eros ut metus placerat rhoncus. Mauris sed mi euismod, sagittis orci eu, bibendum erat. Sed nisi justo.</string>
+    <string name="halo_sekolah">Halo Sekolah</string>
     <string-array name="array_kode_sd">
         <item>sd01</item>
         <item>sd02</item>
