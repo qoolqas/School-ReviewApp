@@ -3,6 +3,7 @@ package com.id.schoolreview.ui.home;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -48,7 +49,7 @@ public class DetailActivity extends AppCompatActivity {
         CollapsingToolbarLayout collapsingToolbarLayout = findViewById(R.id.collapsing_toolbar);
 
         dataSource = new DBDataSource(getApplicationContext());
-
+        Log.d("data", dataSchool.getLocation()+dataSchool.getNama());
         poster = findViewById(R.id.detail_poster);
         banner = findViewById(R.id.detail_banner);
         sarana1 = findViewById(R.id.detail_sarana1);
@@ -98,7 +99,7 @@ public class DetailActivity extends AppCompatActivity {
         maps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String strUri = "http://maps.google.com/maps?q=loc:" + "-7.632328" + "," + "109.245469" + " (" + dataSchool.getNama() + ")";
+                String strUri = "http://maps.google.com/maps?q=loc:" + dataSchool.getLocation() + " (" + dataSchool.getNama() + ")";
                 Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(strUri));
                 intent.setClassName("com.google.android.apps.maps", "com.google.android.maps.MapsActivity");
                 startActivity(intent);

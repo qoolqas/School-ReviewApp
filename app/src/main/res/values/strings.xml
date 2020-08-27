@@ -75,4 +75,9 @@
         <item>@drawable/smk1</item>
         <item>@drawable/smk1</item>
     </string-array>
+    <string-array name="array_location_sd">
+        <item>-7.632328,109.245469</item>
+        <item>-7.632328,109.245469</item>
+        <item>-7.632328,109.245469</item>
+    </string-array>
 </resources>
