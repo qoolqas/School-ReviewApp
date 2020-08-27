@@ -9,7 +9,11 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="AppTheme.Material" parent="Theme.MaterialComponents.Light.NoActionBar"></style>
+    <style name="AppTheme.Material" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
 
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
