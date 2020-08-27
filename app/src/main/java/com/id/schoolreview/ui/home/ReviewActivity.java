@@ -14,6 +14,7 @@ import com.id.schoolreview.R;
 import com.id.schoolreview.pojo.DataReview;
 import com.id.schoolreview.sqlite.DBDataSource;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class ReviewActivity extends AppCompatActivity {
@@ -40,6 +41,10 @@ public class ReviewActivity extends AppCompatActivity {
         }catch (Exception e){
             kode = "0";
             nama = "0";
+        }
+        if (edit.equals("1")) {
+            submit.setText("Simpan Perubahan");
+            setEdit();
         }
 
 
@@ -72,7 +77,7 @@ public class ReviewActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (edit.equals("1")) {
-//                    editRoti();
+                    editReview();
                 } else {
                     createReview();
                 }
@@ -91,5 +96,26 @@ public class ReviewActivity extends AppCompatActivity {
         if (result > 0) {
             finish();
         }
+    }
+    private void setEdit(){
+        ArrayList<DataReview> forms = dataSource.getRotibyKode(kode);
+        if (forms.size() == 1) {
+            final DataReview data = forms.get(0);
+            deskripsi.setText(data.getDeskripsi());
+            ratingBar.setRating(Float.parseFloat(data.getNilai()));
+
+        }
+    }
+    private void editReview() {
+        DataReview data = new DataReview();
+        data.setKode(kode);
+        data.setNama(nama);
+        data.setDeskripsi(deskripsi.getText().toString());
+        data.setNilai(nilai);
+        long result = dataSource.updateRoti(data);
+        if (result > 0) {
+            finish();
+        }
+
     }
 }
