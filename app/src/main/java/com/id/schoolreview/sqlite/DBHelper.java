@@ -8,12 +8,13 @@ import androidx.annotation.Nullable;
 
 public class DBHelper extends SQLiteOpenHelper {
     public static final String DB_NAME = "review.db";
-    public static final int DB_VERSION = 1;
+    public static final int DB_VERSION = 2;
 
     //ROTI
     public static final String TABLE_ROTI = "tableroti";
     public static final String R_ID = "id";
     public static final String R_KODE = "kode";
+    public static final String R_KODEID = "kodeid";
     public static final String R_NAMA = "nama";
     public static final String R_DESKRIPSI = "deskripsi";
     public static final String R_NILAI = "harga";
@@ -25,7 +26,8 @@ public class DBHelper extends SQLiteOpenHelper {
             + R_KODE + " text,"
             + R_NAMA + " text,"
             + R_DESKRIPSI + " text,"
-            + R_NILAI + " text);";
+            + R_NILAI + " text,"
+            + R_KODEID + " text);";
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {

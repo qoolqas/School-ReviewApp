@@ -1,13 +1,16 @@
 package com.id.schoolreview.pojo;
 
 public class ReviewProvider {
-    private String kode,nama,deskripsi,nilai;
+    private String kode,nama,deskripsi,nilai,kodeid;
 
-    public ReviewProvider(String kode, String nama, String deskripsi, String nilai) {
+
+
+    public ReviewProvider(String kode, String nama, String deskripsi, String nilai, String kodeid) {
         this.kode = kode;
         this.nama = nama;
         this.deskripsi = deskripsi;
         this.nilai = nilai;
+        this.kodeid = kodeid;
     }
 
     public String getNama() {
@@ -40,5 +43,12 @@ public class ReviewProvider {
 
     public void setNilai(String nilai) {
         this.nilai = nilai;
+    }
+    public String getKodeid() {
+        return kodeid;
+    }
+
+    public void setKodeid(String kodeid) {
+        this.kodeid = kodeid;
     }
 }
