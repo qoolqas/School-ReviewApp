@@ -88,6 +88,7 @@ public class DetailActivity extends AppCompatActivity {
                 Intent intent = new Intent(DetailActivity.this, ReviewActivity.class);
                 intent.putExtra("kode", dataSchool.getKode());
                 intent.putExtra("nama", dataSchool.getNama());
+                intent.putExtra("edit", "0");
                 startActivity(intent);
             }
 

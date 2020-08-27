@@ -1,7 +1,20 @@
 package com.id.schoolreview.pojo;
 
 public class DataReview {
-    private String kode,nama,deskripsi,nilai;
+    private String kode;
+    private String nama;
+    private String deskripsi;
+    private String nilai;
+
+    public String getKodeid() {
+        return kodeid;
+    }
+
+    public void setKodeid(String kodeid) {
+        this.kodeid = kodeid;
+    }
+
+    private String kodeid;
 
     public String getNama() {
         return nama;

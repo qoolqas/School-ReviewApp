@@ -38,14 +38,18 @@ public class ReviewActivity extends AppCompatActivity {
         try {
             kode = getIntent().getStringExtra("kode");
             nama = getIntent().getStringExtra("nama");
+            edit = getIntent().getStringExtra("edit");
         }catch (Exception e){
             kode = "0";
             nama = "0";
+            edit = "1";
         }
         if (edit.equals("1")) {
             submit.setText("Simpan Perubahan");
             setEdit();
         }
+
+        Log.d("edit", edit+kode);
 
 
         ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
