@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RatingBar;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.id.schoolreview.R;
@@ -93,11 +94,16 @@ public class ReviewActivity extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (edit.equals("1")) {
-                    editReview();
-                } else {
-                    createReview();
+                if (nilai.isEmpty()){
+                    Toast.makeText(getApplicationContext(), "Mohon berikan review", Toast.LENGTH_LONG).show();
+                }else {
+                    if (edit.equals("1")) {
+                        editReview();
+                    } else {
+                        createReview();
+                    }
                 }
+
 
             }
         });

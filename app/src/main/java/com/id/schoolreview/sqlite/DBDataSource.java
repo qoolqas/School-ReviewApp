@@ -19,10 +19,10 @@ public class DBDataSource {
     private String[] rotidata = new String[]
             {
                     DBHelper.R_KODE,
-                    DBHelper.R_KODEID,
                     DBHelper.R_NAMA,
                     DBHelper.R_DESKRIPSI,
-                    DBHelper.R_NILAI
+                    DBHelper.R_NILAI,
+                    DBHelper.R_KODEID
 
             };
     public DBDataSource(Context context) {
@@ -44,6 +44,7 @@ public class DBDataSource {
         values.put(DBHelper.R_NAMA ,dataRoti.getNama());
         values.put(DBHelper.R_DESKRIPSI ,dataRoti.getDeskripsi());
         values.put(DBHelper.R_NILAI, dataRoti.getNilai());
+        values.put(DBHelper.R_KODEID,dataRoti.getKodeid());
 
         long insertId = database.insert(DBHelper.TABLE_ROTI, null,values);
         close();
@@ -57,6 +58,7 @@ public class DBDataSource {
         data.setNama(cursor.getString(1));
         data.setDeskripsi(cursor.getString(2));
         data.setNilai(cursor.getString(3));
+        data.setKodeid(cursor.getString(4));
 
         close();
         return data;
@@ -112,6 +114,7 @@ public class DBDataSource {
         open();
         ContentValues values = new ContentValues();
         values.put(DBHelper.R_KODE,dataRoti.getKode());
+        values.put(DBHelper.R_KODEID,dataRoti.getKodeid());
         values.put(DBHelper.R_NAMA ,dataRoti.getNama());
         values.put(DBHelper.R_DESKRIPSI ,dataRoti.getDeskripsi());
         values.put(DBHelper.R_NILAI, dataRoti.getNilai());

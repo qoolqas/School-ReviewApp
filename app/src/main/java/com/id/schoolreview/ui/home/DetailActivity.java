@@ -102,13 +102,13 @@ public class DetailActivity extends AppCompatActivity {
         if (forms.size() > 0) {
             for (int i = 0; i < forms.toArray().length; i++) {
                 final DataReview cv = forms.get(i);
-                provform = new ReviewProvider(cv.getKode(),cv.getNama(),cv.getDeskripsi(),cv.getNilai());
+                provform = new ReviewProvider(cv.getKode(),cv.getNama(),cv.getDeskripsi(),cv.getNilai(), cv.getKodeid());
                 arraylistform.add(provform);
             }
             adapter.notifyDataSetChanged();
 
         } else {
-            Toast.makeText(getApplicationContext(), "Belum ada review", Toast.LENGTH_LONG).show();
+//            Toast.makeText(getApplicationContext(), "Belum ada review", Toast.LENGTH_LONG).show();
             arraylistform.clear();
             adapter.notifyDataSetChanged();
         }

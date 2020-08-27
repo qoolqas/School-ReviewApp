@@ -6,13 +6,6 @@ public class DataReview {
     private String deskripsi;
     private String nilai;
 
-    public String getKodeid() {
-        return kodeid;
-    }
-
-    public void setKodeid(String kodeid) {
-        this.kodeid = kodeid;
-    }
 
     private String kodeid;
 
@@ -47,4 +40,12 @@ public class DataReview {
     public void setNilai(String nilai) {
         this.nilai = nilai;
     }
+    public String getKodeid() {
+        return kodeid;
+    }
+
+    public void setKodeid(String kodeid) {
+        this.kodeid = kodeid;
+    }
+
 }
