@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.id.schoolreview.ui.gallery.GalleryFragment"
+        android:name="com.id.schoolreview.ui.sd.GalleryFragment"
         android:label="SD"
         tools:layout="@layout/fragment_gallery" />
 
