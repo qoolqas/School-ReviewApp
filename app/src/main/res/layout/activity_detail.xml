@@ -238,10 +238,10 @@
                 android:background="#a9a9a9" />
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:text="Lokasi"
                 app:cornerRadius="8dp"
-                android:layout_margin="16dp"
+                android:layout_margin="8dp"
                 android:id="@+id/btnLokasi"/>
 
             <TextView
@@ -257,8 +257,8 @@
                 android:layout_width="match_parent"
                 android:text="Beri Review"
                 app:cornerRadius="8dp"
-                android:layout_margin="16dp"
-                android:layout_height="60dp"/>
+                android:layout_margin="8dp"
+                android:layout_height="50dp"/>
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv"
                 android:layout_width="match_parent"

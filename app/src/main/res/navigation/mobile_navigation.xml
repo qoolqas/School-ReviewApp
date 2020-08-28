@@ -22,4 +22,9 @@
         android:name="com.id.schoolreview.ui.smp.SlideshowFragment"
         android:label="SMP"
         tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_review"
+        android:name="com.id.schoolreview.ui.review.SemuaReviewFragment"
+        android:label="Semua Review"
+        tools:layout="@layout/fragment_sd" />
 </navigation>
