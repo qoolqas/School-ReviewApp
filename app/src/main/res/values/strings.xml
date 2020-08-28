@@ -87,39 +87,39 @@
     </string-array>
 
     <string-array name="array_alamat_sd">
-        <item>Jalan D.I Panjaitan</item>
-        <item>Jalan D.I Panjaitan</item>
-        <item>Panjaitan</item>
-        <item>Panjaitan</item>
-        <item>Panjaitan</item>
-        <item>Panjaitan</item>
-        <item>Panjaitan</item>
-        <item>Panjaitan</item>
-        <item>Panjaitan</item>
-        <item>Panjaitan</item>
-        <item>Panjaitan</item>
-        <item>Panjaitan</item>
-        <item>Panjaitan</item>
-        <item>Panjaitan</item>
-        <item>Panjaitan</item>
-        <item>Panjaitan</item>
-        <item>Panjaitan</item>
-        <item>Panjaitan</item>
-        <item>Panjaitan</item>
-        <item>Panjaitan</item>
+        <item>Jl. Margantara No. 555</item>
+        <item>Jl. Angsana 1</item>
+        <item>Jl. Sridadi Gang I Perum Karangklesem</item>
+        <item>Bersole, Karangpucung</item>
+        <item>Jl DI Panjaitan No. 377</item>
+        <item>Jl. Cemara Raya Perumnas Teluk</item>
+        <item>Jl. Sarwodadi No. 860 A</item>
+        <item>Jl. Patriot No. 26 - Purwokerto</item>
+        <item>Jl. GERILYA Gg 2</item>
+        <item>Jl. Arsadimeja</item>
+        <item>Jl. Perintis Kemerdekaan No. Ia</item>
+        <item>Jalan Gunung Tugel</item>
+        <item>Jl. Gerilya Tengah No. 9</item>
+        <item>Jl. Gerilya Timur No. 18</item>
+        <item>Jl. Sekolahan No 1</item>
+        <item>Jl. Gerilya No 14 - Purwokerto Selatan</item>
+        <item>Jl. Kh. Wahid Hasyim - Purwokerto Selatan</item>
+        <item>Jl. Gerilya No 14 - Purwokerto Selatan</item>
+        <item>Jl. Sunan Kalijaga No 21</item>
+        <item>Jl. K.H. Wachid Hasyim 66</item>
     </string-array>
 
     <string-array name="array_gambar_sd">
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
+        <item>@drawable/sd1</item>
+        <item>@drawable/sd2a</item>
+        <item>@drawable/sd3a</item>
+        <item>@drawable/sd4</item>
+        <item>@drawable/sd5</item>
+        <item>@drawable/sd6a</item>
+        <item>@drawable/sd7a</item>
+        <item>@drawable/sd8a</item>
+        <item>@drawable/sd9a</item>
+        <item>@drawable/sd10a</item>
         <item>@drawable/smk1</item>
         <item>@drawable/smk1</item>
         <item>@drawable/smk1</item>
@@ -133,6 +133,16 @@
     </string-array>
 
     <string-array name="array_banner_sd">
+        <item>@drawable/sd1</item>
+        <item>@drawable/sd2b</item>
+        <item>@drawable/sd3b</item>
+        <item>@drawable/sd4</item>
+        <item>@drawable/sd5</item>
+        <item>@drawable/sd6b</item>
+        <item>@drawable/sd7b</item>
+        <item>@drawable/sd8b</item>
+        <item>@drawable/sd9b</item>
+        <item>@drawable/sd10b</item>
         <item>@drawable/smk1</item>
         <item>@drawable/smk1</item>
         <item>@drawable/smk1</item>
@@ -143,16 +153,29 @@
         <item>@drawable/smk1</item>
         <item>@drawable/smk1</item>
         <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
+
+    </string-array>
+    <string-array name="array_location_sd">
+        <item>SDN 2 TANJUNG PURWOKERTO, Tanjung, Kabupaten Banyumas, Jawa Tengah</item>
+        <item>SD Negeri 3 Teluk, Karang Malang, Teluk, Kabupaten Banyumas, Jawa Tengah </item>
+        <item>SDN 4 Karangklesem, Jalan Sridadi I, Windusara, Karangklesem, Kabupaten Banyumas, Jawa Tengah</item>
+        <item>SD Negeri 4 Karang Pucung, Kruwet, Teluk, Kabupaten Banyumas, Jawa Tengah</item>
+        <item>SD Negeri 3 Purwokerto Kulon, Jalan DI Panjaitan, Sodagaran, Purwokerto Kulon, Kabupaten Banyumas, Jawa Tengah</item>
+        <item>SD Negeri 5 Teluk, Jalan Ketapang Raya, Karang Malang, Teluk, Kabupaten Banyumas, Jawa Tengah</item>
+        <item>SDN 3 PURWOKERTO KIDUL, Karanganyar, Purwokerto Kidul, Kabupaten Banyumas, Jawa Tengah</item>
+        <item>SD NEGERI 5 KARANGPUCUNG, Jalan Patriot, Gandasuli, Karangpucung, Kabupaten Banyumas, Jawa Tengah</item>
+        <item>SD Negeri 3 Tanjung, Jalan Gerilya Gang II, Cileleng, Tanjung, Kabupaten Banyumas, Jawa Tengah</item>
+        <item>SDN 4 TELUK, RT.01/RW.12, Pamujan, Teluk, Kabupaten Banyumas, Jawa Tengah </item>
+        <item>245469</item>
+        <item>245469</item>
+        <item>245469</item>
+        <item>245469</item>
+        <item>245469</item>
+        <item>245469</item>
+        <item>245469</item>
+        <item>245469</item>
+        <item>245469</item>
+        <item>245469</item>
 
     </string-array>
 
@@ -247,27 +270,6 @@
         <item>@drawable/placeholder</item>
         <item>@drawable/placeholder</item>
     </string-array>
-    <string-array name="array_location_sd">
-        <item>-7.632328,109.245469</item>
-        <item>-7.632328,109.245469</item>
-        <item>-7.632328,109.245469</item>
-        <item>-7.632328,109.245469</item>
-        <item>-7.632328,109.245469</item>
-        <item>-7.632328,109.245469</item>
-        <item>-7.632328,109.245469</item>
-        <item>-7.632328,109.245469</item>
-        <item>-7.632328,109.245469</item>
-        <item>-7.632328,109.245469</item>
-        <item>-7.632328,109.245469</item>
-        <item>-7.632328,109.245469</item>
-        <item>-7.632328,109.245469</item>
-        <item>-7.632328,109.245469</item>
-        <item>-7.632328,109.245469</item>
-        <item>-7.632328,109.245469</item>
-        <item>-7.632328,109.245469</item>
-        <item>-7.632328,109.245469</item>
-        <item>-7.632328,109.245469</item>
-        <item>-7.632328,109.245469</item>
-    </string-array>
+
 </resources>
 

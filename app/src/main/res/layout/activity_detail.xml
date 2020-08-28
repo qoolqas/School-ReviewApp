@@ -120,6 +120,24 @@
                     app:layout_constraintStart_toEndOf="@+id/cardView2"
                     app:layout_constraintTop_toBottomOf="@+id/detail_nama"
                     tools:text="Lokasi : Jalan jendral sudirman no 500" />
+
+                <TextView
+                    android:id="@+id/detail_telfon"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:drawablePadding="4dp"
+                    android:maxLines="1"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:drawableStartCompat="@drawable/ic_baseline_phone_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/cardView2"
+                    app:layout_constraintTop_toBottomOf="@+id/detail_alamat"
+                    tools:text="089573912" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <View

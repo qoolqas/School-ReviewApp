@@ -27,7 +27,7 @@ import java.util.ArrayList;
 public class DetailActivity extends AppCompatActivity {
     DataSchool dataSchool;
     ImageView banner, poster, sarana1, prestasi1;
-    TextView nama, alamat, sarana, prestasi;
+    TextView nama, alamat, sarana, prestasi, telfon;
     MaterialButton review, maps;
     RecyclerView rv;
     private DBDataSource dataSource;
@@ -49,6 +49,7 @@ public class DetailActivity extends AppCompatActivity {
         banner = findViewById(R.id.detail_banner);
         sarana1 = findViewById(R.id.detail_sarana1);
         prestasi1 = findViewById(R.id.detail_prestasi1);
+        telfon = findViewById(R.id.detail_telfon);
 
         nama = findViewById(R.id.detail_nama);
         alamat = findViewById(R.id.detail_alamat);
@@ -64,6 +65,7 @@ public class DetailActivity extends AppCompatActivity {
         alamat.setText(dataSchool.getAlamat());
         sarana.setText(dataSchool.getSarana());
         prestasi.setText(dataSchool.getPrestasi());
+        telfon.setText(dataSchool.getTingkat());
 
         collapsingToolbarLayout.setTitle(dataSchool.getNama());
 
@@ -94,7 +96,7 @@ public class DetailActivity extends AppCompatActivity {
         maps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String strUri = "http://maps.google.com/maps?q=loc:" + dataSchool.getLocation() + " (" + dataSchool.getNama() + ")";
+                String strUri = "http://maps.google.com/maps?q=loc:" + dataSchool.getLocation();
                 Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(strUri));
                 intent.setClassName("com.google.android.apps.maps", "com.google.android.maps.MapsActivity");
                 startActivity(intent);
