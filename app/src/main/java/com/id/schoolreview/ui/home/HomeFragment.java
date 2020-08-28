@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.id.schoolreview.R;
 import com.id.schoolreview.pojo.DataSchool;
 
@@ -21,6 +22,7 @@ public class HomeFragment extends Fragment {
     RecyclerView recyclerViewsd;
     HomeAdapter adapter;
     private ArrayList<DataSchool> list;
+    FloatingActionButton fab;
 
     private String[] kode;
     private String[] nama;
@@ -32,6 +34,8 @@ public class HomeFragment extends Fragment {
     private TypedArray sarana1;
     private String[] prestasi;
     private TypedArray prestasi1;
+    private String[] location;
+
 
     private String[] smpkode;
     private String[] smpnama;
@@ -64,7 +68,7 @@ public class HomeFragment extends Fragment {
     private void prepare() {
         kode = getResources().getStringArray(R.array.array_kode_sd);
         nama = getResources().getStringArray(R.array.array_nama_sd);
-        tingkat = getResources().getStringArray(R.array.array_tingkat_sd);
+        tingkat = getResources().getStringArray(R.array.array_telfon_sd);
         alamat = getResources().getStringArray(R.array.array_alamat_sd);
         gambar = getResources().obtainTypedArray(R.array.array_gambar_sd);
         banner = getResources().obtainTypedArray(R.array.array_banner_sd);
@@ -72,6 +76,7 @@ public class HomeFragment extends Fragment {
         sarana1 = getResources().obtainTypedArray(R.array.array_sarana1_sd);
         prestasi = getResources().getStringArray(R.array.array_prestasi_sd);
         prestasi1 = getResources().obtainTypedArray(R.array.array_prestasi1_sd);
+        location = getResources().getStringArray(R.array.array_location_sd);
 
     }
 
@@ -90,6 +95,7 @@ public class HomeFragment extends Fragment {
             items.setSarana1(sarana1.getResourceId(i, -1));
             items.setPrestasi(prestasi[i]);
             items.setPrestasi1(prestasi1.getResourceId(i, -1));
+            items.setLocation(location[i]);
 
             list.add(items);
         }

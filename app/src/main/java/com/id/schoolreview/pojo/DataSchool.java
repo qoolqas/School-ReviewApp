@@ -4,9 +4,16 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class DataSchool implements Parcelable {
-    String kode, nama, tingkat,alamat, sarana, prestasi;
+    String kode, nama, tingkat,alamat, sarana, prestasi, location;
     int gambar, banner, sarana1,prestasi1;
 
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
 
     public String getKode() {
         return kode;
@@ -109,6 +116,7 @@ public class DataSchool implements Parcelable {
         dest.writeInt(this.banner);
         dest.writeInt(this.sarana1);
         dest.writeInt(this.prestasi1);
+        dest.writeString(this.location);
     }
 
     public DataSchool() {
@@ -125,6 +133,7 @@ public class DataSchool implements Parcelable {
         this.banner = in.readInt();
         this.sarana1 = in.readInt();
         this.prestasi1 = in.readInt();
+        this.location = in.readString();
     }
 
     public static final Parcelable.Creator<DataSchool> CREATOR = new Parcelable.Creator<DataSchool>() {

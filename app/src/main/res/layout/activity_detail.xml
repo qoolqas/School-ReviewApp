@@ -92,13 +92,14 @@
 
                 <TextView
                     android:id="@+id/detail_nama"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/cardView2"
                     app:layout_constraintTop_toTopOf="@+id/cardView2"
                     tools:text="SDN 5 Purwokerto" />
@@ -120,6 +121,24 @@
                     app:layout_constraintStart_toEndOf="@+id/cardView2"
                     app:layout_constraintTop_toBottomOf="@+id/detail_nama"
                     tools:text="Lokasi : Jalan jendral sudirman no 500" />
+
+                <TextView
+                    android:id="@+id/detail_telfon"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:drawablePadding="4dp"
+                    android:maxLines="1"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:drawableStartCompat="@drawable/ic_baseline_phone_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/cardView2"
+                    app:layout_constraintTop_toBottomOf="@+id/detail_alamat"
+                    tools:text="089573912" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <View
@@ -217,14 +236,29 @@
                 android:layout_height="2dp"
                 android:layout_margin="8dp"
                 android:background="#a9a9a9" />
-            <Button
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Lokasi"
+                app:cornerRadius="8dp"
+                android:layout_margin="16dp"
+                android:id="@+id/btnLokasi"/>
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/btnLokasi"/>
+                android:text="Review"
+                android:padding="8dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/black"/>
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnReview"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:text="Beri Review"
+                app:cornerRadius="8dp"
+                android:layout_margin="16dp"
+                android:layout_height="60dp"/>
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv"
                 android:layout_width="match_parent"
