@@ -14,12 +14,12 @@
     <fragment
         android:id="@+id/nav_gallery"
         android:name="com.id.schoolreview.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
+        android:label="SD"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.id.schoolreview.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
+        android:name="com.id.schoolreview.ui.smp.SlideshowFragment"
+        android:label="SMP"
         tools:layout="@layout/fragment_slideshow" />
 </navigation>

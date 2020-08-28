@@ -68,7 +68,7 @@ public class HomeFragment extends Fragment {
     private void prepare() {
         kode = getResources().getStringArray(R.array.array_kode_sd);
         nama = getResources().getStringArray(R.array.array_nama_sd);
-        tingkat = getResources().getStringArray(R.array.array_tingkat_sd);
+        tingkat = getResources().getStringArray(R.array.array_telfon_sd);
         alamat = getResources().getStringArray(R.array.array_alamat_sd);
         gambar = getResources().obtainTypedArray(R.array.array_gambar_sd);
         banner = getResources().obtainTypedArray(R.array.array_banner_sd);

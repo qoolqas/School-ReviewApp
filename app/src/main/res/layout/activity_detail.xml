@@ -212,11 +212,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     tools:src="@drawable/smk1" />
             </androidx.constraintlayout.widget.ConstraintLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_margin="8dp"
-                android:background="#a9a9a9" />
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
@@ -224,6 +220,19 @@
                 app:cornerRadius="8dp"
                 android:layout_margin="16dp"
                 android:id="@+id/btnLokasi"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_margin="8dp"
+                android:background="#a9a9a9" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Review"
+                android:padding="8dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/black"/>
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnReview"
                 android:layout_width="match_parent"

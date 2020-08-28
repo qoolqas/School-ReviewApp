@@ -3,12 +3,9 @@ package com.id.schoolreview.ui.home;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -26,7 +23,6 @@ import com.id.schoolreview.pojo.ReviewProvider;
 import com.id.schoolreview.sqlite.DBDataSource;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class DetailActivity extends AppCompatActivity {
     DataSchool dataSchool;
@@ -49,7 +45,6 @@ public class DetailActivity extends AppCompatActivity {
         CollapsingToolbarLayout collapsingToolbarLayout = findViewById(R.id.collapsing_toolbar);
 
         dataSource = new DBDataSource(getApplicationContext());
-        Log.d("data", dataSchool.getLocation()+dataSchool.getNama());
         poster = findViewById(R.id.detail_poster);
         banner = findViewById(R.id.detail_banner);
         sarana1 = findViewById(R.id.detail_sarana1);

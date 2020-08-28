@@ -20,27 +20,113 @@
         <item>sd01</item>
         <item>sd02</item>
         <item>sd03</item>
+        <item>sd04</item>
+        <item>sd05</item>
+        <item>sd06</item>
+        <item>sd07</item>
+        <item>sd08</item>
+        <item>sd09</item>
+        <item>sd10</item>
+        <item>sd11</item>
+        <item>sd12</item>
+        <item>sd13</item>
+        <item>sd14</item>
+        <item>sd15</item>
+        <item>sd16</item>
+        <item>sd17</item>
+        <item>sd18</item>
+        <item>sd19</item>
+        <item>sd20</item>
     </string-array>
 
     <string-array name="array_nama_sd">
-        <item>SD 01 Purwokerto</item>
-        <item>SD 02 Purwokerto</item>
-        <item>SD 03 Purwokerto</item>
+        <item>SDN 2 TANJUNG</item>
+        <item>SD NEGERI 3 TELUK</item>
+        <item>SD NEGERI 4 KARANGKLESEM</item>
+        <item>SDN 4 KARANGPUCUNG</item>
+        <item>SD N 3 PURWOKERTO KULON</item>
+        <item>SDN 5 TELUK</item>
+        <item>SD NEGERI 3 PURWOKERTO KIDUL</item>
+        <item>SDN 5 KARANGPUCUNG</item>
+        <item>SD NEGERI 3 TANJUNG</item>
+        <item>SD NEGERI 4 TELUK</item>
+        <item>SD N 2 PURWOKERTO KULON</item>
+        <item>SDN 3 KARANGKLESEM</item>
+        <item>SDN 3 KARANGPUCUNG</item>
+        <item>SD N 3 BERKOH</item>
+        <item>SD NEGERI 1 BERKOH</item>
+        <item>SD NEGERI 1 KARANGPUCUNG</item>
+        <item>SDN 1 KARANGKLESEM</item>
+        <item>SD NEGERI 2 KARANGPUCUNG</item>
+        <item>SD N 2 BERKOH</item>
+        <item>SDN 2 KARANGKLESEM</item>
     </string-array>
 
-    <string-array name="array_tingkat_sd">
-        <item>SD</item>
-        <item>SD</item>
-        <item>SD</item>
+
+    <string-array name="array_telfon_sd">
+        <item>0281 640632</item>
+        <item>0281 – 6847234</item>
+        <item>02816843856</item>
+        <item>0281643503</item>
+        <item>(0281) 623064</item>
+        <item>0281–6847358</item>
+        <item>0281–643349</item>
+        <item>0281626586</item>
+        <item>0281639566</item>
+        <item>0281–625896</item>
+        <item>0281630429</item>
+        <item>02816577408</item>
+        <item>(0281)635807</item>
+        <item>0281–638130</item>
+        <item>(0281) 62673</item>
+        <item>0281633803</item>
+        <item>(0281) 626748</item>
+        <item>0281–625261</item>
+        <item>02816844183</item>
+        <item>0281628484</item>
     </string-array>
 
     <string-array name="array_alamat_sd">
         <item>Jalan D.I Panjaitan</item>
         <item>Jalan D.I Panjaitan</item>
-        <item>Jalan D.I Panjaitan</item>
+        <item>Panjaitan</item>
+        <item>Panjaitan</item>
+        <item>Panjaitan</item>
+        <item>Panjaitan</item>
+        <item>Panjaitan</item>
+        <item>Panjaitan</item>
+        <item>Panjaitan</item>
+        <item>Panjaitan</item>
+        <item>Panjaitan</item>
+        <item>Panjaitan</item>
+        <item>Panjaitan</item>
+        <item>Panjaitan</item>
+        <item>Panjaitan</item>
+        <item>Panjaitan</item>
+        <item>Panjaitan</item>
+        <item>Panjaitan</item>
+        <item>Panjaitan</item>
+        <item>Panjaitan</item>
     </string-array>
 
     <string-array name="array_gambar_sd">
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
         <item>@drawable/smk1</item>
         <item>@drawable/smk1</item>
         <item>@drawable/smk1</item>
@@ -50,34 +136,138 @@
         <item>@drawable/smk1</item>
         <item>@drawable/smk1</item>
         <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+        <item>@drawable/smk1</item>
+
     </string-array>
 
     <string-array name="array_sarana_sd">
-        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara</item>
-        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara</item>
-        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara, Laboratorium, Lapangan olahraga, Mushola</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara, Laboratorium, Lapangan olahraga, Mushola</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara, Laboratorium, Lapangan olahraga, Mushola</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara, Laboratorium, Lapangan olahraga, Mushola</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara, Laboratorium, Lapangan olahraga, Mushola</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara, Laboratorium, Lapangan olahraga, Mushola</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara, Laboratorium, Lapangan olahraga, Mushola</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara, Laboratorium, Lapangan olahraga, Mushola</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara, Laboratorium, Lapangan olahraga, Mushola</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara, Laboratorium, Lapangan olahraga, Mushola</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara, Laboratorium, Lapangan olahraga, Mushola</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara, Laboratorium, Lapangan olahraga, Mushola</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara, Laboratorium, Lapangan olahraga, Mushola</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara, Laboratorium, Lapangan olahraga, Mushola</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara, Laboratorium, Lapangan olahraga, Mushola</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara, Laboratorium, Lapangan olahraga, Mushola</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara, Laboratorium, Lapangan olahraga, Mushola</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara, Laboratorium, Lapangan olahraga, Mushola</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara, Laboratorium, Lapangan olahraga, Mushola</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara, Laboratorium, Lapangan olahraga, Mushola</item>
     </string-array>
 
     <string-array name="array_sarana1_sd">
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
     </string-array>
 
     <string-array name="array_prestasi_sd">
         <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara</item>
         <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara</item>
         <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara</item>
+        <item>Ruangan Kelas, Perpustakaan, Lapangan Upacara</item>
     </string-array>
 
     <string-array name="array_prestasi1_sd">
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/placeholder</item>
     </string-array>
     <string-array name="array_location_sd">
         <item>-7.632328,109.245469</item>
         <item>-7.632328,109.245469</item>
         <item>-7.632328,109.245469</item>
+        <item>-7.632328,109.245469</item>
+        <item>-7.632328,109.245469</item>
+        <item>-7.632328,109.245469</item>
+        <item>-7.632328,109.245469</item>
+        <item>-7.632328,109.245469</item>
+        <item>-7.632328,109.245469</item>
+        <item>-7.632328,109.245469</item>
+        <item>-7.632328,109.245469</item>
+        <item>-7.632328,109.245469</item>
+        <item>-7.632328,109.245469</item>
+        <item>-7.632328,109.245469</item>
+        <item>-7.632328,109.245469</item>
+        <item>-7.632328,109.245469</item>
+        <item>-7.632328,109.245469</item>
+        <item>-7.632328,109.245469</item>
+        <item>-7.632328,109.245469</item>
+        <item>-7.632328,109.245469</item>
     </string-array>
 </resources>
+
