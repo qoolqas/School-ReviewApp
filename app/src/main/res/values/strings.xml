@@ -120,16 +120,16 @@
         <item>@drawable/sd8a</item>
         <item>@drawable/sd9a</item>
         <item>@drawable/sd10a</item>
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/sd12a</item>
+        <item>@drawable/sd13a</item>
+        <item>@drawable/sd14a</item>
+        <item>@drawable/sd15a</item>
+        <item>@drawable/sd16a</item>
+        <item>@drawable/sd17a</item>
+        <item>@drawable/sd18</item>
+        <item>@drawable/sd19a</item>
+        <item>@drawable/sd20a</item>
     </string-array>
 
     <string-array name="array_banner_sd">
@@ -143,16 +143,16 @@
         <item>@drawable/sd8b</item>
         <item>@drawable/sd9b</item>
         <item>@drawable/sd10b</item>
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
-        <item>@drawable/smk1</item>
+        <item>@drawable/placeholder</item>
+        <item>@drawable/sd12b</item>
+        <item>@drawable/sd13b</item>
+        <item>@drawable/sd14b</item>
+        <item>@drawable/sd15b</item>
+        <item>@drawable/sd16b</item>
+        <item>@drawable/sd17b</item>
+        <item>@drawable/sd18</item>
+        <item>@drawable/sd19b</item>
+        <item>@drawable/sd20b</item>
 
     </string-array>
     <string-array name="array_location_sd">
@@ -166,15 +166,15 @@
         <item>SD NEGERI 5 KARANGPUCUNG, Jalan Patriot, Gandasuli, Karangpucung, Kabupaten Banyumas, Jawa Tengah</item>
         <item>SD Negeri 3 Tanjung, Jalan Gerilya Gang II, Cileleng, Tanjung, Kabupaten Banyumas, Jawa Tengah</item>
         <item>SDN 4 TELUK, RT.01/RW.12, Pamujan, Teluk, Kabupaten Banyumas, Jawa Tengah </item>
-        <item>245469</item>
-        <item>245469</item>
-        <item>245469</item>
-        <item>245469</item>
-        <item>245469</item>
-        <item>245469</item>
-        <item>245469</item>
-        <item>245469</item>
-        <item>245469</item>
+        <item>Sekolah Dasar Negeri Purwokerto kulon 02, Karangbawang, Purwokerto Kulon, Kabupaten Banyumas, Jawa Tengah</item>
+        <item>SD Negeri 3 Karangklesem, Jalan Raya Gunung Tugel, Pringgede, Karangklesem, Kabupaten Banyumas, Jawa Tengah</item>
+        <item>SDN 3 Karangpucung, Jalan Kelurahan, Karangpucung, Kabupaten Banyumas, Jawa Tengah</item>
+        <item>SD N 3 Berkoh, Sokabaru, Berkoh, Kabupaten Banyumas, Jawa Tengah</item>
+        <item>SD Negeri 1 Berkoh, Jalan Sekolahan, Sokabaru, Berkoh, Kabupaten Banyumas, Jawa Tengah</item>
+        <item>SD Negeri 1 Karangpucung, Jl. Kh. Agus Salim, Karangpucung, Kabupaten Banyumas, Jawa Tengah</item>
+        <item>SDN 1 Karangklesem, Windusara, Karangklesem, Kabupaten Banyumas, Jawa Tengah</item>
+        <item>SD Negeri 2 Karangpucung, Karangpucung, Kabupaten Banyumas, Jawa Tengah</item>
+        <item>SD Negeri 2 Berkoh, Pesuruhan, Berkoh, Kabupaten Banyumas, Jawa Tengah</item>
         <item>245469</item>
 
     </string-array>

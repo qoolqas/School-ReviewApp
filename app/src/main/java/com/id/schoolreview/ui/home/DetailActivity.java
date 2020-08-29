@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -29,6 +30,7 @@ public class DetailActivity extends AppCompatActivity {
     ImageView banner, poster, sarana1, prestasi1;
     TextView nama, alamat, sarana, prestasi, telfon;
     MaterialButton review, maps;
+
     RecyclerView rv;
     private DBDataSource dataSource;
     ReviewProvider provform;
@@ -77,6 +79,7 @@ public class DetailActivity extends AppCompatActivity {
         adapter = new ReviewAdapter(this, arraylistform);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         rv = findViewById(R.id.rv);
+        rv.addItemDecoration(new DividerItemDecoration(rv.getContext(), DividerItemDecoration.VERTICAL));
         rv.setLayoutManager(mLayoutManager);
         rv.setAdapter(adapter);
 
