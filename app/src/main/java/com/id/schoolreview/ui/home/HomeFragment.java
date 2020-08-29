@@ -1,28 +1,37 @@
 package com.id.schoolreview.ui.home;
 
+import android.app.Dialog;
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.id.schoolreview.R;
 import com.id.schoolreview.pojo.DataSchool;
+import com.toptoche.searchablespinnerlibrary.SearchableSpinner;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class HomeFragment extends Fragment {
     RecyclerView recyclerViewsd;
     HomeAdapter adapter;
     private ArrayList<DataSchool> list;
-    FloatingActionButton fab;
 
     private String[] kode;
     private String[] nama;

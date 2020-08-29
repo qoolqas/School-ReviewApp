@@ -5,9 +5,17 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
+            android:id="@+id/nav_main"
             android:icon="@drawable/ic_baseline_home_24"
             android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_baseline_format_list_bulleted_24"
+            android:title="List Sekolah" />
+        <item
+            android:id="@+id/nav_review"
+            android:icon="@drawable/ic_baseline_rate_review_24"
+            android:title="Semua Review" />
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_baseline_school_24"
@@ -16,9 +24,6 @@
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_baseline_school_24"
             android:title="SMP" />
-        <item
-            android:id="@+id/nav_review"
-            android:icon="@drawable/ic_baseline_rate_review_24"
-            android:title="Semua Review" />
+
     </group>
 </menu>
